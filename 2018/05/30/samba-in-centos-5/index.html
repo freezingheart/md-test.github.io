@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hello World!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在CentOS Linux 5.5中完成 Samba 共享服务的配置本机环境：宿主机OS：Windows 8.1 Pro x64虚拟机软件：Oracle VituralBox 4.3.20虚拟机OS：CentOS Linux 5.5原题如下：（二）在主机Centos-A1中完成Samba共享服务器的部署  (25分)1、在此服务器中安装配置Samba服务，创建三个用户m1,m2,m3。分别建立共享">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World!">
+<meta property="og:url" content="https://hexo.fzht.pw/2018/05/30/samba-in-centos-5/index.html">
+<meta property="og:site_name" content="Hello World!">
+<meta property="og:description" content="在CentOS Linux 5.5中完成 Samba 共享服务的配置本机环境：宿主机OS：Windows 8.1 Pro x64虚拟机软件：Oracle VituralBox 4.3.20虚拟机OS：CentOS Linux 5.5原题如下：（二）在主机Centos-A1中完成Samba共享服务器的部署  (25分)1、在此服务器中安装配置Samba服务，创建三个用户m1,m2,m3。分别建立共享">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/948002011.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/3333033062.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/3299347519.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/4195235193.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/2226318351.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/2845282817.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/1362858391.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/4212708056.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/2867492784.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/4045799854.png">
+<meta property="og:image" content="http://fzht.pw/usr/uploads/2015/02/1446737290.png">
+<meta property="og:updated_time" content="2015-02-09T03:37:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello World!">
+<meta name="twitter:description" content="在CentOS Linux 5.5中完成 Samba 共享服务的配置本机环境：宿主机OS：Windows 8.1 Pro x64虚拟机软件：Oracle VituralBox 4.3.20虚拟机OS：CentOS Linux 5.5原题如下：（二）在主机Centos-A1中完成Samba共享服务器的部署  (25分)1、在此服务器中安装配置Samba服务，创建三个用户m1,m2,m3。分别建立共享">
+<meta name="twitter:image" content="http://fzht.pw/usr/uploads/2015/02/948002011.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hello World!" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hello World!</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://hexo.fzht.pw"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-samba-in-centos-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/30/samba-in-centos-5/" class="article-date">
+  <time datetime="2018-05-30T14:03:30.328Z" itemprop="datePublished">2018-05-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="在CentOS-Linux-5-5中完成-Samba-共享服务的配置"><a href="#在CentOS-Linux-5-5中完成-Samba-共享服务的配置" class="headerlink" title="在CentOS Linux 5.5中完成 Samba 共享服务的配置"></a>在CentOS Linux 5.5中完成 Samba 共享服务的配置</h1><!--markdown-->本机环境：<br>宿主机OS：Windows 8.1 Pro x64<br>虚拟机软件：Oracle VituralBox 4.3.20<br>虚拟机OS：CentOS Linux 5.5<br><br>原题如下：<br>（二）在主机Centos-A1中完成Samba共享服务器的部署  (25分)<br>1、在此服务器中安装配置Samba服务，创建三个用户m1,m2,m3。分别建立共享m1,m2,m3,public，本地目录分别为/opt/a1, /opt/a2, /opt/a3, /opt/public；(10分)<br>2、默认以匿名访问，可以对public有读权限。进入其它文件夹时需要对其身份认证；(2.5分)<br>3、其中，m1用户属于manager组，对m1,m2,m3共享有读写权限。m2,m3为同一项目组m2的成员，可以互相对彼此文件有读的权限。/opt/a1的共享只有manager组用户可以访问；(10分)<br>4、提取本机eth0网卡IPv4地址，如（192.168.10.10），请把命令存入本机桌面BACKUP文件夹中command文件；（2.5分）<br><br><br><a id="more"></a>
+<p>详解如下：</p>
+<ol>
+<li>建立虚拟机并安装Guest OS（此处略）。不过，一个比较重要的问题是，在安装时要选中启用I/O APIC 选项（如下图），<br><img src="http://fzht.pw/usr/uploads/2015/02/948002011.png" alt="image001.png"><br>不然会在安装时，出现NET: Registered protocol family 2 显示并卡住而使安装无法正常进行（如下图）。<img src="http://fzht.pw/usr/uploads/2015/02/3333033062.png" alt="image002.png"></li>
+<li><p>题1：在此服务器中安装配置Samba服务，创建三个用户m1,m2,m3。分别建立共享m1,m2,m3,public，本地目录分别为/opt/a1, /opt/a2, /opt/a3, /opt/public；(10分)<br>a)    </p>
+<p>yum install samba </p>
+</li>
+</ol>
+<p>使用在线安装或本地yum源安装（本地安装可以参考我之前的一篇文章《配置本地yum更新源》）。<br>↓由于我安装时使用Server模式安装，所以已经预装了Samba。<br><img src="http://fzht.pw/usr/uploads/2015/02/3299347519.png" alt="image003.png"></p>
+<pre><code>b)    mkdir /opt/public 
+c)    mkdir /opt/a1
+d)    mkdir /opt/a2
+e)    mkdir /opt/a3 
+</code></pre><p>分别将匿名用户访问目录，m1,m2,m3用户访问目录建立。</p>
+<pre><code>f)    useradd m1 &amp;&amp; passwd m1
+g)    useradd m2 &amp;&amp; passwd m2
+h)    useradd m3 &amp;&amp; passwd m3
+</code></pre><p>将m1,m2,m3用户建立并设立密码</p>
+<pre><code>i)    smbpasswd –a m1
+j)    smbpasswd –a m2
+k)    smbpasswd –a m3
+</code></pre><p>为m1,m2,m3用户建立smb用户，使其可以访问samba资源。</p>
+<!--more-->
+<p><img src="http://fzht.pw/usr/uploads/2015/02/4195235193.png" alt="image004.png"><br>    l)    </p>
+<pre><code>cd /etc/samba/
+</code></pre><p>切换目录至/etc/samba/<br><img src="http://fzht.pw/usr/uploads/2015/02/2226318351.png" alt="image005.png"><br>    m)    </p>
+<pre><code>vim smb.conf
+</code></pre><p>其中：<br>        i.    在[global]节下，添加<code>map to guest = bad user</code> 行。<br><img src="http://fzht.pw/usr/uploads/2015/02/2845282817.png" alt="image006.png"><br>        ii.    在配置文件最后，添加[public]节<br>在节内添加以下行</p>
+<pre><code>path = /opt/public     //共享路径
+browseable = yes      //是否可浏览
+guest ok = yes        //是否可匿名访问
+</code></pre><p><img src="http://fzht.pw/usr/uploads/2015/02/1362858391.png" alt="image007.png"><br>        iii.    现在已经完成了匿名用户的配置。可以在Windows下使用\ip\public访问Samba共享资源。<br><img src="http://fzht.pw/usr/uploads/2015/02/4212708056.png" alt="image008.png"><br>        iv.    在配置文件中，新建[a1]节，在节中增加以下行：<br>    path = /opt/a1<br>    browseable =yes<br>    guest ok = no<br>    writable =yes<br>    valid users =m1 ,@manager        //允许访问的用户</p>
+<p><img src="http://fzht.pw/usr/uploads/2015/02/2867492784.png" alt="image009.png"><br>        v.    依据[a1]节，新增[a2]、[a3]节<br>[a2]</p>
+<pre><code>path = /opt/a2
+browseable =yes
+guest ok = no
+writable =yes
+valid users =m2 ,@manager,@m2
+read list = m3                   //表示在可读写环境中只读的用户
+</code></pre><p>[a3]</p>
+<pre><code>path = /opt/a3
+browseable =yes
+guest ok = no
+writable =yes
+valid users =m3 ,@manager,@m2
+read list = m2
+</code></pre><p><img src="http://fzht.pw/usr/uploads/2015/02/4045799854.png" alt="image010.png"><br>    n)    切换目录至/opt/<br>cd /opt/<br>    o)    切换拥有者、拥有组<br>    chown m1.manager a1 &amp;&amp; chown m2.manager a2 &amp;&amp; chown m3.manager a3<br>    p)    为文件夹授权<br>    chmod 775 m1 &amp;&amp; chmod 775 m2 &amp;&amp; chmod 775 m3</p>
+<ol start="3">
+<li>默认以匿名访问，可以对public有读权限。进入其它文件夹时需要对其身份认证；(2.5分)<br>设置选项为smb.conf中的map to guest =bad user ,//设置匿名访问的一个重要点<br>Security=user,<br>及各个共享节中的valid users 。</li>
+<li>其中，m1用户属于manager组，对m1,m2,m3共享有读写权限。m2,m3为同一项目组m2的成员，可以互相对彼此文件有读的权限。/opt/a1的共享只有manager组用户可以访问；(10分)</li>
+<li>设置项为smb.conf中的各个共享节中的valid users<br>例如[a2]共享节 ，valid users =m2 ,@manager,@m2<br>表示可访问用户为m2,manager组用户,m2组用户。</li>
+<li>提取本机eth0网卡IPv4地址，如（192.168.10.10），请把命令存入本机桌面BACKUP文件夹中command文件；（2.5分）<br>ifconfig eth0<br><img src="http://fzht.pw/usr/uploads/2015/02/1446737290.png" alt="image011.png">在inet addr段中获取ip，保存至指定位置。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hexo.fzht.pw/2018/05/30/samba-in-centos-5/" data-id="cjht6lz8x0006rkv8yswnannk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/30/nfs-auto-remount/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/05/30/samba-in-centos-5/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/30/nfs-auto-remount/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/30/LG-G2-cant-double-click-unlock-solution/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/30/howto-reinstall-system/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/30/configure-local-yum-source/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Hello World!<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
