@@ -5,17 +5,17 @@
   
   <title>Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="NFS创建用户在终端登录后自动挂载，退出时自动卸载。# useradd nfsuser passwd nfsuser然后进入其加目录/home/nfsuser，使用ls -al命令查看隐藏文件。可以看到，有两个接下来需要用到的文件，.bashprofile和.bashlogout。[info].bash_profile 类似于编程中的构造函数，当登录shell时，shell会寻找该文件做环境初始化">
+  <meta name="description" content="NFS创建用户在终端登录后自动挂载，退出时自动卸载。 title: NFS创建用户在终端登录后自动挂载，退出时自动卸载。date: 2015-02-28 13:55:00 tags:# useradd nfsuser passwd nfsuser然后进入其加目录/home/nfsuser，使用ls -al命令查看隐藏文件。可以看到，有两个接下来需要用到的文件，.bashprofile和.bashl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World!">
 <meta property="og:url" content="https://hexo.fzht.pw/2018/05/30/nfs-auto-remount/index.html">
 <meta property="og:site_name" content="Hello World!">
-<meta property="og:description" content="NFS创建用户在终端登录后自动挂载，退出时自动卸载。# useradd nfsuser passwd nfsuser然后进入其加目录/home/nfsuser，使用ls -al命令查看隐藏文件。可以看到，有两个接下来需要用到的文件，.bashprofile和.bashlogout。[info].bash_profile 类似于编程中的构造函数，当登录shell时，shell会寻找该文件做环境初始化">
+<meta property="og:description" content="NFS创建用户在终端登录后自动挂载，退出时自动卸载。 title: NFS创建用户在终端登录后自动挂载，退出时自动卸载。date: 2015-02-28 13:55:00 tags:# useradd nfsuser passwd nfsuser然后进入其加目录/home/nfsuser，使用ls -al命令查看隐藏文件。可以看到，有两个接下来需要用到的文件，.bashprofile和.bashl">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2015-02-28T05:55:00.000Z">
+<meta property="og:updated_time" content="2018-05-30T14:31:11.557Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World!">
-<meta name="twitter:description" content="NFS创建用户在终端登录后自动挂载，退出时自动卸载。# useradd nfsuser passwd nfsuser然后进入其加目录/home/nfsuser，使用ls -al命令查看隐藏文件。可以看到，有两个接下来需要用到的文件，.bashprofile和.bashlogout。[info].bash_profile 类似于编程中的构造函数，当登录shell时，shell会寻找该文件做环境初始化">
+<meta name="twitter:description" content="NFS创建用户在终端登录后自动挂载，退出时自动卸载。 title: NFS创建用户在终端登录后自动挂载，退出时自动卸载。date: 2015-02-28 13:55:00 tags:# useradd nfsuser passwd nfsuser然后进入其加目录/home/nfsuser，使用ls -al命令查看隐藏文件。可以看到，有两个接下来需要用到的文件，.bashprofile和.bashl">
   
     <link rel="alternate" href="/atom.xml" title="Hello World!" type="application/atom+xml">
   
@@ -76,7 +76,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="NFS创建用户在终端登录后自动挂载，退出时自动卸载。"><a href="#NFS创建用户在终端登录后自动挂载，退出时自动卸载。" class="headerlink" title="NFS创建用户在终端登录后自动挂载，退出时自动卸载。"></a>NFS创建用户在终端登录后自动挂载，退出时自动卸载。</h1><p><!--markdown--># useradd nfsuser</p>
+        <h1 id="NFS创建用户在终端登录后自动挂载，退出时自动卸载。"><a href="#NFS创建用户在终端登录后自动挂载，退出时自动卸载。" class="headerlink" title="NFS创建用户在终端登录后自动挂载，退出时自动卸载。"></a>NFS创建用户在终端登录后自动挂载，退出时自动卸载。</h1><hr>
+<p>title: NFS创建用户在终端登录后自动挂载，退出时自动卸载。<br>date: 2015-02-28 13:55:00</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p><!--markdown--># useradd nfsuser</p>
 <h1 id="passwd-nfsuser"><a href="#passwd-nfsuser" class="headerlink" title="passwd nfsuser"></a>passwd nfsuser</h1><p>然后进入其加目录/home/nfsuser，使用ls -al命令查看隐藏文件。<br>可以看到，有两个接下来需要用到的文件，.bashprofile和.bashlogout。<br>[info].bash_profile 类似于编程中的构造函数，当登录shell时，shell会寻找该文件做环境初始化。<br>.bashrc 是.bash_profile的替补。<br>.bash_logout 类似于编程中的析构函数，当登录shell退出时，shell会寻找该文件，并按其指示办事。[/info]<br>根据上面的解释，打开.bash_profile，直接在下方写入挂载的命令</p>
 <pre><code>sudo mount 192.168.2.1:/var/test /home/nfsuser/t
 </code></pre><p>sudo是为了使用root权限挂载，普通用户是挂载不了的。<br>保存退出后，进入下一个.bash_logout这个文本，输入卸载的命令</p>
@@ -93,7 +95,7 @@ nfsuser localhost=/bin/umount
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hexo.fzht.pw/2018/05/30/nfs-auto-remount/" data-id="cjht6lz960008rkv8xe0chlvf" class="article-share-link">Share</a>
+      <a data-url="https://hexo.fzht.pw/2018/05/30/nfs-auto-remount/" data-id="cjht7pc180004p0v8eaug89eo" class="article-share-link">Share</a>
       
       
     </footer>

@@ -5,17 +5,17 @@
   
   <title>Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法最近下载量比较大，虽然数据都是往机械硬盘写的，但是主硬盘（SSD）写入量还是很大，我的浦科特可禁不起这种折腾，一开始还以为是IDM的锅，然后把IDM的缓存文件路径改为D盘（机械硬盘）以后，情况还是没有好转，打开了资源监视器，调节至磁盘活动 按总数（字节/秒）排序 发现System进程读写C:\Windows\System32">
+  <meta name="description" content="Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法 title: Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法date: 2015-04-12 17:15:00 tags:最近下载量比较大，虽然数据都是往机械硬盘写的，但是主硬盘（SSD）写入量还是很大，我的浦科特可禁不起这种折腾，一开始还以为是IDM的锅，然后把IDM的缓存文件路径改为D盘（机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World!">
 <meta property="og:url" content="https://hexo.fzht.pw/2018/05/30/windows_8_wfpdiag_write_problem/index.html">
 <meta property="og:site_name" content="Hello World!">
-<meta property="og:description" content="Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法最近下载量比较大，虽然数据都是往机械硬盘写的，但是主硬盘（SSD）写入量还是很大，我的浦科特可禁不起这种折腾，一开始还以为是IDM的锅，然后把IDM的缓存文件路径改为D盘（机械硬盘）以后，情况还是没有好转，打开了资源监视器，调节至磁盘活动 按总数（字节/秒）排序 发现System进程读写C:\Windows\System32">
+<meta property="og:description" content="Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法 title: Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法date: 2015-04-12 17:15:00 tags:最近下载量比较大，虽然数据都是往机械硬盘写的，但是主硬盘（SSD）写入量还是很大，我的浦科特可禁不起这种折腾，一开始还以为是IDM的锅，然后把IDM的缓存文件路径改为D盘（机">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2015-04-12T09:15:00.000Z">
+<meta property="og:updated_time" content="2018-05-30T14:34:16.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World!">
-<meta name="twitter:description" content="Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法最近下载量比较大，虽然数据都是往机械硬盘写的，但是主硬盘（SSD）写入量还是很大，我的浦科特可禁不起这种折腾，一开始还以为是IDM的锅，然后把IDM的缓存文件路径改为D盘（机械硬盘）以后，情况还是没有好转，打开了资源监视器，调节至磁盘活动 按总数（字节/秒）排序 发现System进程读写C:\Windows\System32">
+<meta name="twitter:description" content="Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法 title: Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法date: 2015-04-12 17:15:00 tags:最近下载量比较大，虽然数据都是往机械硬盘写的，但是主硬盘（SSD）写入量还是很大，我的浦科特可禁不起这种折腾，一开始还以为是IDM的锅，然后把IDM的缓存文件路径改为D盘（机">
   
     <link rel="alternate" href="/atom.xml" title="Hello World!" type="application/atom+xml">
   
@@ -76,14 +76,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Windows-8-1系统中wfpdiag-etl-写入量非常大的解决方法"><a href="#Windows-8-1系统中wfpdiag-etl-写入量非常大的解决方法" class="headerlink" title="Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法"></a>Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法</h1><p><!--markdown-->最近下载量比较大，虽然数据都是往机械硬盘写的，但是主硬盘（SSD）写入量还是很大，我的浦科特可禁不起这种折腾，一开始还以为是IDM的锅，然后把IDM的缓存文件路径改为D盘（机械硬盘）以后，情况还是没有好转，打开了资源监视器，调节至磁盘活动 按总数（字节/秒）排序 发现System进程读写C:\Windows\System32\wfp\wfpdiag.etl 的一个文件读写量非常大，排名第一，速百度之，发现这个文件是Windows创建的用于跟踪文件，收集IPsec和防火墙活动的诊断信息。也提供了关闭的方法<br>Win+X+A （以管理员方式运行命令提示符）同意UAC后，输入</p>
+        <h1 id="Windows-8-1系统中wfpdiag-etl-写入量非常大的解决方法"><a href="#Windows-8-1系统中wfpdiag-etl-写入量非常大的解决方法" class="headerlink" title="Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法"></a>Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法</h1><hr>
+<p>title: Windows 8.1系统中wfpdiag.etl 写入量非常大的解决方法<br>date: 2015-04-12 17:15:00</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p><!--markdown-->最近下载量比较大，虽然数据都是往机械硬盘写的，但是主硬盘（SSD）写入量还是很大，我的浦科特可禁不起这种折腾，一开始还以为是IDM的锅，然后把IDM的缓存文件路径改为D盘（机械硬盘）以后，情况还是没有好转，打开了资源监视器，调节至磁盘活动 按总数（字节/秒）排序 发现System进程读写C:\Windows\System32\wfp\wfpdiag.etl 的一个文件读写量非常大，排名第一，速百度之，发现这个文件是Windows创建的用于跟踪文件，收集IPsec和防火墙活动的诊断信息。也提供了关闭的方法<br>Win+X+A （以管理员方式运行命令提示符）同意UAC后，输入</p>
 <pre><code>netsh wfp set options netevents = off
 </code></pre><p>返回成功<br>这时再看资源管理器，SSD的读写占用已经明显低下来了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://hexo.fzht.pw/2018/05/30/windows_8_wfpdiag_write_problem/" data-id="cjht6lz990009rkv82e598qoe" class="article-share-link">Share</a>
+      <a data-url="https://hexo.fzht.pw/2018/05/30/windows_8_wfpdiag_write_problem/" data-id="cjht7pc1h0008p0v8pe7msr0q" class="article-share-link">Share</a>
       
       
     </footer>
